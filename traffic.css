@@ -1,0 +1,103 @@
+body{
+    background: url('road.jpg') no-repeat;
+    background-size: cover;
+}
+/* traffic Light background design */
+.traffic-light {
+    background: #222;
+    width: 170px;
+    height: 465px; /* increased height to accommodate countdown */
+    border-radius: 20px;
+    position: relative;
+    border: solid 5px #878585;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    margin: 50px auto;
+}
+
+.traffic-light:before {
+    background: #222;
+    content: "";
+    width: 170px;
+    height: 150px;
+    margin: 0 auto;
+    position: absolute;
+    top: -20px;
+    margin-left: 0px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.light {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(7, 7, 7);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+/* color include */
+.red {
+    background: red;
+    background-image: radial-gradient(rgb(194, 40, 40), transparent);
+    background-size: 4px 4px;
+    border: dotted 1px red;
+    box-shadow: 0 0 20px #111 inset, 0 0 10px red;
+}
+
+.yellow {
+    background: yellow;
+    background-image: radial-gradient(#FFCE21, transparent);
+    background-size: 4px 4px;
+    border: dotted 1px yellow;
+    box-shadow: 0 0 20px #111 inset, 0 0 10px yellow;
+}
+
+.green {
+    background: green;
+    background-image: radial-gradient(lime, transparent);
+    background-size: 4px 4px;
+    border: dotted 1px lime;
+    box-shadow: 0 0 20px #111 inset, 0 0 10px lime;
+}
+
+.controls {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 36px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #0a0a0a;
+    color: #f70707;
+}
+
+#countdown {
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff0000; /* red by default */
+    background-color: #222;
+    border: 5px solid #878585;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    font-family: 'Digital-7', sans-serif;
+    animation: blink 1s step-start infinite;
+}
+
+
+@font-face {
+    font-family: 'Digital-7';
+    src: url('https://fonts.gstatic.com/s/digital-7/d-7.woff2') format('woff2');
+}
